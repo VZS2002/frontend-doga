@@ -1,24 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import { Routes, Route,} from "react-router-dom";
+import Fooldal from './pages/Fooldal';
+import Tapasztalat from './pages/Tapasztalat';
+import Idopont from './pages/Idopont';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route exact path="/" element={<Fooldal/>}></Route>
+        <Route exact path="/tapasztalat" element = {<Tapasztalat/>}></Route>
+        <Route exact path="/idopont" element={<Idopont/>}></Route>
+     </Routes>
+     
+    </>
   );
 }
 
