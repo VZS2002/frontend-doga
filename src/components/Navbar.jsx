@@ -13,7 +13,7 @@ padding: 5px;
    justify-content: center;
 `
 const NavbarLink = styled(Link)`
-font-size: 20px;
+font-size: 2vh;
 align-items: center;
 margin: 20px;
 text-decoration: none;
