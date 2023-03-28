@@ -42,7 +42,7 @@ setMessage('Köszönjük a megkeresését!');
             <label>Rendezvény dátuma</label>
             <Input type="date" placeholder="Rendezvény dátuma" name="date" required/>
             <label>Leírás</label>
-            <Textarea placeholder="" cols="40" rows="2" required />
+            <Textarea placeholder="" cols="40" rows="2" name="leiras" required />
             <Button type="submit" required>Elküld</Button>
         </Form>
         {message && <Uzenet>{message}</Uzenet>}
