@@ -18,7 +18,11 @@ const Uzenet = styled.p`
     text-align: center;
    
 `
+const Textarea = styled.textarea`
+ margin-bottom: -13px;
+ margin-left: 7px;
 
+`
 const Button = styled.button`
 padding:8px;
 margin:10px;
@@ -33,10 +37,12 @@ setMessage('Köszönjük a megkeresését!');
       <>
       <Navbar></Navbar>
         <Form onSubmit={handleSubmit}>
-            <Input type="text" placeholder="Név" name="name" required/>
+            <label>Név</label>
+            <Input type="text" placeholder="" name="name" required/>
+            <label>Rendezvény dátuma</label>
             <Input type="date" placeholder="Rendezvény dátuma" name="date" required/>
-            <Input type="text" placeholder="Leírás" name="info" required/>
-            <textarea placeholder="Leírás" cols="40" rows="2" required ></textarea>
+            <label>Leírás</label>
+            <Textarea placeholder="" cols="40" rows="2" required />
             <Button type="submit" required>Elküld</Button>
         </Form>
         {message && <Uzenet>{message}</Uzenet>}
